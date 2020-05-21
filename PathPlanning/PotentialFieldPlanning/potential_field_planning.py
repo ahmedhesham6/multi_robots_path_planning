@@ -139,6 +139,7 @@ def potential_field_planning(sx, sy, gx, gy, ox, oy, reso, rr):
 
 def draw_heatmap(data):
     data = np.array(data).T
+    plt.axis("equal")
     plt.pcolor(data, vmax=100.0, cmap=plt.cm.Blues)
 
 

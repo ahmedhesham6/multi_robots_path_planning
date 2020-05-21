@@ -36,4 +36,4 @@ Features:
 > conda env create -f environment.yml
 
 
-3. Execute python script in each directory.
+3. Execute main.py python script in each directory.
