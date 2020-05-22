@@ -17,7 +17,7 @@ N_SAMPLE = 500  # number of sample_points
 N_KNN = 10  # number of edge from one sampled point
 MAX_EDGE_LEN = 30.0  # [m] Maximum edge length
 
-show_animation = True
+show_animation = False
 
 
 class Node:
@@ -201,7 +201,6 @@ def dijkstra_planning(sx, sy, gx, gy, ox, oy, rr, road_map, sample_x, sample_y):
             plt.pause(0.001)
 
         if c_id == (len(road_map) - 1):
-            print("goal is found!")
             ngoal.pind = current.pind
             ngoal.cost = current.cost
             break
@@ -282,7 +281,7 @@ def sample_points(sx, sy, gx, gy, rr, ox, oy, obkdtree):
 
 
 def main():
-    print(__file__ + " start!!")
+    # print(__file__ + " start!!")
 
     # start and goal position
     sx = 10.0  # [m]
@@ -322,7 +321,7 @@ def main():
 
     rx, ry = PRM_planning(sx, sy, gx, gy, ox, oy, robot_size)
 
-    assert rx, 'Cannot found path'
+    assert rx
 
     if show_animation:
         plt.plot(rx, ry, "-r")

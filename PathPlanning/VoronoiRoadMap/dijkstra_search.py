@@ -53,7 +53,6 @@ class DijkstraSearch:
 
         while True:
             if self.has_node_in_set(close_set, goal_node):
-                print("goal is found!")
                 goal_node.parent = current_node.parent
                 goal_node.cost = current_node.cost
                 break

@@ -70,5 +70,6 @@ target/
 .ipynb_checkpoints
 
 matplotrecorder/*
+.vscode
 .vscode/launch.json
 .vscode/settings.json

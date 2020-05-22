@@ -17,7 +17,7 @@ KP = 5.0  # attractive potential gain
 ETA = 100.0  # repulsive potential gain
 AREA_WIDTH = 30.0  # potential area width [m]
 
-show_animation = True
+show_animation = False
 
 
 def calc_potential_field(gx, gy, ox, oy, reso, rr):
@@ -132,7 +132,7 @@ def potential_field_planning(sx, sy, gx, gy, ox, oy, reso, rr):
             plt.plot(ix, iy, ".r")
             plt.pause(0.01)
 
-    print("Goal!!")
+    # print("Goal!!")
 
     return rx, ry
 
@@ -144,7 +144,7 @@ def draw_heatmap(data):
 
 
 def main():
-    print("potential_field_planning start")
+    # print("potential_field_planning start")
 
     sx = 0.0  # start x position [m]
     sy = 10.0  # start y positon [m]
@@ -169,6 +169,6 @@ def main():
 
 
 if __name__ == '__main__':
-    print(__file__ + " start!!")
+    # print(__file__ + " start!!")
     main()
-    print(__file__ + " Done!!")
+    # print(__file__ + " Done!!")

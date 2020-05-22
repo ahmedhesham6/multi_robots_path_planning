@@ -91,7 +91,7 @@ class AStarPlanner:
                     plt.pause(0.001)
 
             if current.x == ngoal.x and current.y == ngoal.y:
-                print("Find goal")
+                # print("Find goal")
                 ngoal.pind = current.pind
                 ngoal.cost = current.cost
                 break
@@ -188,15 +188,15 @@ class AStarPlanner:
         self.miny = round(min(oy))
         self.maxx = round(max(ox))
         self.maxy = round(max(oy))
-        print("minx:", self.minx)
-        print("miny:", self.miny)
-        print("maxx:", self.maxx)
-        print("maxy:", self.maxy)
+        # print("minx:", self.minx)
+        # print("miny:", self.miny)
+        # print("maxx:", self.maxx)
+        # print("maxy:", self.maxy)
 
         self.xwidth = round((self.maxx - self.minx) / self.reso)
         self.ywidth = round((self.maxy - self.miny) / self.reso)
-        print("xwidth:", self.xwidth)
-        print("ywidth:", self.ywidth)
+        # print("xwidth:", self.xwidth)
+        # print("ywidth:", self.ywidth)
 
         # obstacle map generation
         self.obmap = [[False for i in range(self.ywidth)]
@@ -227,7 +227,7 @@ class AStarPlanner:
 
 
 def main():
-    print(__file__ + " start!!")
+    # print(__file__ + " start!!")
 
     # start and goal position
     sx = 10.0  # [m]

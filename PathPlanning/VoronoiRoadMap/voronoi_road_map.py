@@ -10,10 +10,16 @@ import math
 import numpy as np
 import scipy.spatial
 import matplotlib.pyplot as plt
-from dijkstra_search import DijkstraSearch
-from kdtree import KDTree
+try:
+    from PathPlanning.VoronoiRoadMap.dijkstra_search import DijkstraSearch
+except:
+    from dijkstra_search import DijkstraSearch
+try:
+    from PathPlanning.VoronoiRoadMap.kdtree import KDTree
+except:
+    from kdtree import KDTree
 
-show_animation = True
+show_animation = False
 
 
 class VoronoiRoadMapPlanner:
@@ -132,7 +138,7 @@ class VoronoiRoadMapPlanner:
 
 
 def main():
-    print(__file__ + " start!!")
+    # print(__file__ + " start!!")
 
     # start and goal position
     sx = 10.0  # [m]
@@ -173,7 +179,7 @@ def main():
     rx, ry = VoronoiRoadMapPlanner().planning(sx, sy, gx, gy, ox, oy,
                                               robot_size)
 
-    assert rx, 'Cannot found path'
+    assert rx
 
     if show_animation:  # pragma: no cover
         plt.plot(rx, ry, "-r")
